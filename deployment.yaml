@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: american-predictor-deployment
+  labels:
+    app: matheussouza-american-predictor
 spec:
   replicas: 2
   selector:
@@ -13,8 +15,8 @@ spec:
         app: matheussouza-american-predictor
     spec:
       containers:
-      - name: american-predictor
-        image: docker.io/matheuspimenta/american-predictor:0.1
+      - name: matheussouza-american-predictor
+        image: docker.io/matheuspimenta/american-predictor:0.2
         env:
         - name: MODEL_VERSION
           value: "0.1"
