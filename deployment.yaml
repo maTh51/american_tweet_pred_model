@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: matheussouza-american-predictor
-        image: docker.io/matheuspimenta/american-predictor:0.3
+        image: docker.io/matheuspimenta/american-predictor:0.5
         env:
         - name: CODE_VERSION
-          value: "0.4"
+          value: "0.5"
         ports:
         - containerPort: 5024
